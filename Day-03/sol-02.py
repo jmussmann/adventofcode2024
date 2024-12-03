@@ -9,7 +9,10 @@ def process_line(line):
     parts = line.split("do()")
     parts2 = []
     for p in parts:
-        parts2.append(p.split("don't()")[0])
+        if (i := p.find("don't()")) > -1:
+            parts2.append(p[:i])
+        else:
+            parts2.append(p)
 
     res = 0
 
