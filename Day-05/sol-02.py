@@ -84,6 +84,8 @@ def main(argv):
 
     canidates = check_lines(inlines, rules)
     res = 0
+    # Unfortunately sorting the rules is not as easy as i thought
+    # So looping until everything is correct:
     while (len(check_lines(inlines, rules)) > 0):
         pass
     for canidate in canidates:
